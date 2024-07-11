@@ -4,15 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter Links</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Combined Counters</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
 <body>
-    <div class="nav-links">
-        <a href="count.html">Counter</a>
-        <a href="counter.html">AlpineJS Counter</a>
+    
+
+    <!-- JavaScript Counter -->
+    <div id="counter-js" class="container">
+        <h1>JavaScript Counter</h1>
+        <div>
+            <div class="caption"></div>
+            <div class="counter"></div>
+            <div class="input-group">
+                <button class="increment">Increment</button>
+                <button class="decrement">Decrement</button>
+                <button class="reset-js">Reset</button>
+            </div>
+        </div>
     </div>
+
+    <!-- AlpineJS Counter -->
+    <div id="alpinejs-counter" class="container" x-data="{ count: 0, maxCount: 10 }">
+        <h1>AlpineJS Counter</h1>
+        <div class="counter" x-text="count"></div>
+        <div class="input-group">
+            <button @click="count < maxCount ? count++ : count = 0">+</button>
+            <button @click="count > 0 ? count-- : count = 0">-</button>
+            <button @click="count = 0">Reset</button>
+        </div>
+        <div class="message" x-show="count >= maxCount">
+            Max value reached, counter reset!
+        </div>
+    </div>
+
+    <script src="index.js" defer></script>
 </body>
 
 </html>

@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-
 <body>
-  <div class="container" x-data="{ count: 0, maxCount: 10 }">
-    <h1>AlpineJS Counter</h1>
-    <div class="counter" x-text="count"></div>
-    <div class="input-group">
-      <button @click="count < maxCount ? count++ : count = 0">+</button>
-      <button @click="count > 0 ? count-- : count = 0">-</button>
-      <button @click="count = 0">Reset</button>
+    <div class="nav-links">
+        <a href="index.html">Counter</a>
+        <!-- <a href="#alpinejs-counter">AlpineJS Counter</a> -->
     </div>
-    <div class="message" x-show="count >= maxCount">
-      Max value reached, counter reset!
-    </div>
-  </div>
-  <script src="//unpkg.com/alpinejs" defer></script>
-
 </body>
-
 </html>
