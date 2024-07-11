@@ -29,14 +29,10 @@
 .nav-links {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 50px;
 }
 
 .nav-links a {
     margin: 0 10px;
     text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    border-radius: 5px;
-    cursor: pointer;
+    color: #007bff;
 }
